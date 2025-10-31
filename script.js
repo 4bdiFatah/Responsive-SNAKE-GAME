@@ -8,7 +8,7 @@ let velocityY = 0;
 let gameOver = false;
 let score = 0;
 let highScore;
-let speed = 200;
+let speed = 300;
 let gameLoop;
 
 let up = document.getElementById("up");
@@ -149,3 +149,4 @@ function endGame() {
     location.reload("");
 
 };
+
