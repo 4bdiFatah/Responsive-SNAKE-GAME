@@ -8,7 +8,7 @@ let velocityY = 0;
 let gameOver = false;
 let score = 0;
 let highScore;
-let speed = 100;
+let speed = 200;
 let gameLoop;
 
 let up = document.getElementById("up");
@@ -135,14 +135,7 @@ function detectFood(headX,headY){
         foodY = Math.floor(Math.random() * rows) * blockSize;
         score++;
 
-        if(speed > 40){
-            speed -= 5;
-        };
-        console.log(speed);
-        
 
-        clearInterval(gameLoop);
-        gameLoop = setInterval(update,speed)
     } else {
         snake.shift();
     }
@@ -154,4 +147,5 @@ function endGame() {
     gameOver = true;
     alert("game.over");
     location.reload("");
+
 };
